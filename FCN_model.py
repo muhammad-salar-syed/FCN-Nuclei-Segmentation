@@ -6,7 +6,7 @@ import tensorflow as tf
 def FCN_8(IMG_SHAPE):
     
     inputs = Input(shape = IMG_SHAPE, name='input')
-    s = tf.keras.layers.Lambda(lambda x: x / 255)(inputs)
+    #s = tf.keras.layers.Lambda(lambda x: x / 255)(inputs)
     # Building a pre-trained VGG-16 feature extractor (i.e., without the final FC layers)
     vgg16 = VGG16(include_top=False, weights='imagenet', input_tensor=s)
     f3 = vgg16.get_layer('block3_pool').output  
