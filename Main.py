@@ -94,5 +94,5 @@ callbacks = [
 
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 history = model.fit(X_train, Y_train, validation_split=0.1, batch_size=8, epochs=30, callbacks=callbacks)
-model.save('./fcn.hdf5')
+model.save('./unet.hdf5')
 
